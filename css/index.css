@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+ul{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+  background-color: #3a00d8;
+}
+.container {
+  background-color: #060239;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template: 
+    "title       info"
+    "description ."
+    "education   ."
+    "skills      softskills" /
+     70%         30%;
+  }
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    word-spacing: 100rem;
+  }
+}
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+h3 {
+  color: #ffc5f6;
+  font-weight: 400;
+}
+.cv__title{
+  grid-area: title;
+}
+.cv__info {
+  padding: 2rem 0;
+  grid-area: info;
+}
+.cv__item {
+  color: #fff;
+  font-size: .8rem;
+  padding: .25rem 0;
+}
+.cv__item a {
+  color: #fff;
+}
+.cv__item .iconify {
+  color: #fc6976;
+  margin-right: .5rem;
+}
+.cv__description {
+  grid-area: description;
+}
+.cv__description p {
+  color: #fff;
+  font-size: .85rem;
+}
+.cv__description p:nth-of-type(1) {
+  padding-top: 1rem;
+}
+.cv__description p:nth-of-type(2) {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .cv__description p {
+    padding-right: 4rem;
+    text-align: justify;
+  }
+}
+
+.cv__education {
+  grid-area: education;
+}
+.education__item {
+  margin: 1rem 0;
+}
+.education__item:last-of-type {
+  margin-bottom: 2rem;
+}
+.education__item .item__date,
+.education__item .item__title,
+.education__item .item__subtitle {
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+}
+.education__item .item__subtitle {
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.item__date {
+  padding: .5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .education__item {
+    display: flex;
+    gap: 3rem;
+  }
+  .cv__education {
+    margin: 2rem 0;
+  }
+  .cv__education h3 {
+    padding-left: 8.5rem;
+  }
+}
+
+.cv__skills {
+  grid-area: skills;
+}
+@media screen and (min-width: 768px) {
+  .cv__skills {
+    padding-right: 4rem;
+  }
+}
+.skills__list,
+.softskills__list {
+  margin: 2rem 0;
+}
+.skills__item {
+  padding: .5rem 0;
+  display: flex;
+}
+.skills__tech {
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 400;
+  width: 50%;
+}
+.skills__bar {
+  width: 50%;
+  height: .8rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin-top: .15rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 .2rem;
+}
+.skills__percent {
+  background-color: #e43397;
+  height: .5rem;
+  border-radius: 1rem;
+}
+
+.cv__softskills {
+  grid-area: softskills;
+}
+.softskills__item {
+  color: #fff;
+  font-size: .85rem;
+  padding: .5rem 0;
+}
+
+.cv__title, 
+.cv__description,
+.cv__info,
+.cv__education,
+.cv__skills,
+.cv__softskills {
+  position: relative;
+  z-index: 1;
+}
+.container > svg {
+  position: absolute;
+  animation: blobMove 30s linear infinite;
+  width: 400px;
+  height: 250px;
+}
+
+@keyframes blobMove {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+.container > svg:nth-of-type(1) {
+  top: 0%;
+  left: -10%;
+}
+.container > svg:nth-of-type(2) {
+  top: 35%;
+  left: 50%;
+}
+.container > svg:nth-of-type(3) {
+  position: absolute;
+  left: 40%;
+  bottom: -8%;
+  width: 30rem;
+}
+@media screen and (min-width: 768px) {
+  .container > svg:nth-of-type(1) {
+    top: 0%;
+    left: -10%;
+  }
+  .container > svg:nth-of-type(2) {
+    top: 30%;
+    left: 80%;
+  }
+  .container > svg:nth-of-type(3) {
+    position: absolute;
+    left: 70%;
+    bottom: -8%;
+    width: 40rem;
+  }
+}

@@ -1,36 +1,40 @@
 const skills = [
   {
-    name: 'Figma',
-    percent: 70
+    name: 'JavaScript'
   },
   {
-    name: 'JavaScript',
-    percent: 60
+    name: 'HTML'
   },
   {
-    name: 'HTML',
-    percent: 80
+    name: 'CSS'
   },
   {
-    name: 'CSS',
-    percent: 85
+    name: 'React'
   },
   {
-    name: 'React',
-    percent: 50
+    name: 'Git'
   },
   {
-    name: 'GitHub',
-    percent: 50
+    name: 'SQLServer, MYSQL'
   },
   {
-    name: 'Photoshop',
-    percent: 30
+    name: 'PHP'
   },
   {
-    name: 'Microsoft Office',
-    percent: 70
-  }
+    name: 'Figma'
+  },
+  {
+    name: 'GitHub'
+  },
+  {
+    name: 'Photoshop'
+  },
+  {
+    name: 'Microsoft Office'
+  },
+  {
+    name: 'UX/UI'
+  },
 ];
 
 const $skillsList = document.querySelector(".skills__list");
@@ -42,17 +46,16 @@ skills.forEach( skill => {
   const $name = document.createElement('p');
   $name.innerText = skill.name;
   $name.className = 'skills__tech';
-  const $bar = document.createElement('div');
-  $bar.className = 'skills__bar';
-  const $barPercent = document.createElement('div');
-  $barPercent.className = 'skills__percent';
-  $barPercent.style.width = `${skill.percent}%`;
+  // const $bar = document.createElement('div');
+  // $bar.className = 'skills__bar';
+  // const $barPercent = document.createElement('div');
+  // $barPercent.className = 'skills__percent';
+  // $barPercent.style.width = `${skill.percent}%`;
 
-  $bar.appendChild($barPercent);
+  // $bar.appendChild($barPercent);
   $item.appendChild($name);
-  $item.appendChild($bar);
-
+  // $item.appendChild($bar);
+  console.log($item)
   $fragment.appendChild($item);
 });
-console.log($fragment)
 $skillsList.appendChild($fragment);

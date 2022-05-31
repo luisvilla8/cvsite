@@ -135,7 +135,7 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .cv__skills {
-    padding-right: 4rem;
+    padding-left: 8.5rem;
   }
 }
 .skills__list,
@@ -150,24 +150,6 @@ h3 {
   color: #fff;
   font-size: .85rem;
   font-weight: 400;
-  width: 50%;
-}
-.skills__bar {
-  width: 50%;
-  height: .8rem;
-  background-color: #fff;
-  border-radius: 1rem;
-  margin-top: .15rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  padding: 0 .2rem;
-}
-.skills__percent {
-  background-color: #e43397;
-  height: .5rem;
-  border-radius: 1rem;
 }
 
 .cv__softskills {
